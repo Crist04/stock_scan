@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                         builder: (context) => PlainTextScans(scans: value.scanList[index])),
                   );
                 },
-                child: ListContainer(title: value.scanList[index].name,isicon: true,details: value.scanList[index].tag,),
+                child: ListContainer(title: value.scanList[index].name,isicon: true,details: value.scanList[index].tag,secondary: value.scanList[index].color=="red"?Colors.red:Colors.green,),
               );
             },
           );

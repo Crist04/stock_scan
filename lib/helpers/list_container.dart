@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 class ListContainer extends StatelessWidget {
   const ListContainer(
-      {super.key, required this.title, this.details = "", this.isicon = false});
+      {super.key, required this.title, this.details = "", this.isicon = false,this.secondary=Colors.deepPurple});
   final String title;
   final String details;
   final bool isicon;
+  final Color secondary;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -58,7 +59,7 @@ class ListContainer extends StatelessWidget {
                           ),
                           Text(details,
                               style: TextStyle(
-                                  color: Color(0xff696b9e),
+                                  color: secondary,
                                   fontSize: 13,
                                   letterSpacing: .3)),
                         ],
